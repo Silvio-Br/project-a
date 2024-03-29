@@ -1,0 +1,13 @@
+- hosts: localhost
+  vars:
+    dir_playbooks_included: "included-playbooks"
+  tasks:
+    - name: Clone playbook-b
+      ansible.builtin.git:
+        repo: http://github.com/Silvio-Br/project-b.git
+        dest: "{{dir_playbooks_included}}/playbook-b"
+
+    - name: Include playbook-b
+      include_tasks: "{{dir_playbooks_included}}/playbook-b/playbook-b.yml"
+      vars:
+          param1: "I think it's working!"

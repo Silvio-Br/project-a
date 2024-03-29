@@ -1,2 +1,4 @@
 .idea/
-.imported-playbook/
+/imported-playbooks/
+/included-playbooks/
+/logs/

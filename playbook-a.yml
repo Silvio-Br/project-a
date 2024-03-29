@@ -1,0 +1,9 @@
+# example simple playbook that import a remote playbook with parameters
+
+- hosts: localhost
+  tasks:
+    - name: Clone repo B
+      git:
+        repo: 'https://github.com/Silvio-Br/project-b.git'
+        dest: 'imported-playbook'
+
